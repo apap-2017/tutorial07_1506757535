@@ -18,8 +18,8 @@ public class CourseRestController {
 	
 	@RequestMapping("/course/view/{id}")
 	public CourseModel view(@PathVariable(value = "id") String id) {
-		CourseModel student = studentService.selectCourse(id);
-		return student;
+		CourseModel course = studentService.selectCourse(id);
+		return course;
 	}
 	
 	@RequestMapping("/course/viewall")
