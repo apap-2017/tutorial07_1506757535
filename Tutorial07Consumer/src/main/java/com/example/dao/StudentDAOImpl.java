@@ -20,10 +20,11 @@ public class StudentDAOImpl implements StudentDAO {
 		return student;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<StudentModel> selectAllStudents() {
-		// TODO Auto-generated method stub
-		return null;
+		List<StudentModel> students = restTemplate.getForObject("http://localhost:8080/rest/student/viewall", List.class);
+		return students;
 	}
 
 }
